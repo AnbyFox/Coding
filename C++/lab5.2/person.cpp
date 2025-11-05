@@ -27,9 +27,10 @@ void Person::info()
     std::cout << name << "\t" << birthYear << "\n";
 }
 
-Person::operator char *() // оператор преобразования в char* нужен для возможности вывода с помощью cout
+Person::operator char *()
 {
     std::stringstream result;
     result << name << " " << birthYear;
     return (char*)result.str().c_str();
+
 }
