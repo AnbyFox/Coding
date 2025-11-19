@@ -12,8 +12,8 @@ int main()
     Pet b5("Tosya", "Cat");
     Pet b6("Sharf", "Fox");
 
-    std::list<Pet> petList;
-    std::set<Pet> petSet;
+    list<Pet> petList;
+    set<Pet> petSet;
 
     petList.push_back(b1);
     petList.push_back(b2);
@@ -21,18 +21,19 @@ int main()
     petList.push_back(b4);
     petList.push_back(b5);
     petList.push_back(b6);
-    for (std::list<Pet>::iterator it = petList.begin(); it != petList.end(); it++)
+    for(list<Pet>::iterator it = petList.begin(); it != petList.end(); it++)
     {
         it->info();
     }
 
-    std::cout << "- - - - - - - >" << "\n";
+    cout << "- - - - - - - >" << "\n";
 
     petSet = getPetsOfType(petList, "Cat");
-    for (std::set<Pet>::iterator it = petSet.begin(); it != petSet.end(); it++)
+    for(set<Pet>::iterator it = petSet.begin(); it != petSet.end(); it++)
     {
         it->info();
     }
 
     return 0;
 }
+
